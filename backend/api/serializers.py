@@ -5,7 +5,7 @@ from .models import *
 class SocialPostSerializer(serializers.ModelSerializer):
     class Meta:
         model = SocialPostModel
-        fields = ["id", "author", "title", "content", "post_zone"]
+        fields = ["id", "author", "title", "content", "post_zone", "city"]
 
 class JobSerializer(serializers.ModelSerializer):
     class Meta:

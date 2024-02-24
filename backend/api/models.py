@@ -5,6 +5,7 @@ class SocialPostModel(models.Model):
     title = models.CharField(max_length = 180)
     content = models.CharField(max_length = 180)
     post_zone = models.CharField(max_length = 180)
+    city = models.CharField(max_length = 180)
     timestamp = models.DateTimeField(auto_now_add = True, auto_now = False, blank = True)
 
     def __str__(self):
