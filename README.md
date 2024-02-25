@@ -1,3 +1,16 @@
+#### Files Setup
+
+you must create a .env.prodution.local file in the project root with 3 values
+
+```
+ENV_VARIABLE=?
+NEXT_PUBLIC_ENV_VARIABLE=?
+DJANGO_SECRET_KEY=?
+```
+
+do not run this software in production or public environments
+
+
 #### Setup from Docker
 
 ```
