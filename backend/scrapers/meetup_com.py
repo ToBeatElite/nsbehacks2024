@@ -35,9 +35,7 @@ def get_events_from_meetup_com(cityname):
         name = event.get("name")
         url = event.get("url")
         description = event.get("description")[:80]
-        
-
-
+    
         data = f'title="{name}"&description="{url, description}"&city="{cityname}"'
 
         response = requests.post(

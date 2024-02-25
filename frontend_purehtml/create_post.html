@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Post</title>
+</head>
+<body>
+    <div>
+        <h1>Create Post</h1>
+        <form id="postForm">
+            <label for="author">Author Name:</label>
+            <input type="text" id="author" name="author"><br><br>
+            
+            <label for="title">Post Title:</label>
+            <input type="text" id="title" name="title"><br><br>
+            
+            <label for="content">Post Content:</label>
+            <input type="text" id="content" name="content"><br><br>
+            
+            <label for="city">Author City:</label>
+            <input type="text" id="city" name="city"><br><br>
+            
+            <button type="button" onclick="submitForm()">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        function submitForm() {
+            const author = document.getElementById('author').value;
+            const title = document.getElementById('title').value;
+            const content = document.getElementById('content').value;
+            const city = document.getElementById('city').value;
+            
+            const params = new URLSearchParams();
+            params.append('author', author);
+            params.append('title', title);
+            params.append('content', content);
+            params.append('city', city);
+
+            fetch('http://localhost:8000/posts/create', {
+                method: 'POST',
+                mode: 'no-cors',
+                body: params
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+            });
+        }
+    </script>
+</body>
+</html>
