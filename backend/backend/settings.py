@@ -4,7 +4,7 @@ DEBUG = True # SECURITY WARNING
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = __import__('os').environ.get('DJANGO_SECRET_KEY')
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', 'django-app']
 
 INSTALLED_APPS = [
     'django.contrib.admin',

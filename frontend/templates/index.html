@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Feed</title>
+</head>
+<body>
+    <h1>Your Feed</h1>
+    <ul>
+        {% for item in data %}
+        <li>
+            <strong>Author:</strong> {{ item.author }}<br>
+            <strong>Title:</strong> {{ item.title }}<br>
+            <strong>Content:</strong> {{ item.content }}<br>
+            <strong>City:</strong> {{ item.city }}<br>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
